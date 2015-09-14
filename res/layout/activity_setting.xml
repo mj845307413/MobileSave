@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res/com.example.mj_mobileserver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="#8866ff00"
+        android:gravity="center"
+        android:text="设置中心"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <ui.SettingItemView
+        android:id="@+id/SettingItemView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        setting:description_off="设置自动更新已经关闭"
+        setting:description_on="设置自动更新已经开启"
+        setting:setting_title="设置自动更新" >
+    </ui.SettingItemView>
+
+    <ui.SettingItemView
+        android:id="@+id/show_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        setting:description_off="显示号码归属地已经关闭"
+        setting:description_on="显示号码归属地已经开启"
+        setting:setting_title="显示号码归属地" >
+    </ui.SettingItemView>
+
+    <ui.SettingItemView
+        android:id="@+id/sms_safe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        setting:description_off="短信拦截已经关闭"
+        setting:description_on="短信拦截已经开启"
+        setting:setting_title="短信拦截" >
+    </ui.SettingItemView>
+
+    <ui.SettingClickView
+        android:id="@+id/setting_window"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        setting:description_off="效果 为"
+        setting:setting_title="归属地提示框风格" >
+    </ui.SettingClickView>
+
+    <ui.SettingItemView
+        android:id="@+id/app_lock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        setting:description_off="程序锁已经关闭"
+        setting:description_on="程序锁已经开启"
+        setting:setting_title="程序锁" >
+    </ui.SettingItemView>
+
+    <SlidingDrawer
+        android:id="@+id/myfirstdrawer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:content="@+id/myfirst_content"
+        android:handle="@+id/myfirst_handle" >
+
+        <ImageView
+            android:id="@id/myfirst_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock" />
+
+        <LinearLayout
+            android:id="@id/myfirst_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="什么都没有SB" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+</LinearLayout>
